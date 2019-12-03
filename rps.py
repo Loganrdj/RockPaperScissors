@@ -5,8 +5,11 @@ bet = 0
 
 
 while bankacc != 0:
-
+    
     handchoice = raw_input("Please choose R(Rock), P(Paper), or S(Scissors): ")
+    handchoice = handchoice.upper()
+    if(handchoice == 'EXIT' or handchoice.startswith('E') or handchoice == 'QUIT' or handchoice.startswith('q')):
+        break
     compchoice = random.randint(1,3)
     betchoice = int(raw_input("Please place a bet: "))
 
